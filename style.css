@@ -86,9 +86,6 @@ canvas {
     margin-top: 20px;
     margin-left: 0px;
   }
-  .inputArea .fileInput img {
-    max-width: initial;
-  }
   .outputArea {
     margin-top: 20px;
   }
