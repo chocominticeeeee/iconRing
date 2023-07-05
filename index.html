@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>アイコンリング合成</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.css"
+      integrity="sha512-C4k/QrN4udgZnXStNFS5osxdhVECWyhMsK1pnlk+LkC7yJGCqoYxW4mH3/ZXLweODyzolwdWSqmmadudSHMRLA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"
+      integrity="sha512-6lplKUSl86rUVprDIjiW8DuOniNX8UDoRATqZSds/7t6zCQZfaCe3e5zcGaQwxa8Kpn5RTM9Fvl3X2lLV4grPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.css" integrity="sha512-C4k/QrN4udgZnXStNFS5osxdhVECWyhMsK1pnlk+LkC7yJGCqoYxW4mH3/ZXLweODyzolwdWSqmmadudSHMRLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.js" integrity="sha512-LjPH94gotDTvKhoxqvR5xR2Nur8vO5RKelQmG52jlZo7SwI5WLYwDInPn1n8H9tR0zYqTqfNxWszUEy93cHHwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <header><span>アイコンリング合成</span><a href="https://twitter.com/Choccomintice" target="_blank"><i class="ai-twitter-fill"></i></a></header>
+    <main>
+      <div class="inputArea mt-3">
+        <div class="fileInput ring">
+          <label for="formFile" class="form-label"
+            >アイコンリングをアップロード</label
+          >
+          <input class="form-control form-control-sm" type="file" id="inputRingImg" />
+          <span>プレビュー↓</span>
+          <img id="prevRingImg" class="img-thumbnail" src="" alt="" />
+        </div>
+        <div class="fileInput icon">
+          <label for="formFile" class="form-label"
+            >アイコンをアップロード</label
+          >
+          <input class="form-control form-control-sm" type="file" id="inputIconImg" />
+          <span>プレビュー↓</span>
+          <img id="prevIconImg" class="img-thumbnail" src="" alt="" />
+        </div>
+      </div>
+      <div class="outputArea mt-3 pb-3">
+        <p>合成後↓</p>
+        <canvas id="my-canvas" class="img-thumbnail" width="400" height="400"></canvas>
+        <img id="result" src="" alt="">
+        <a id="dlBtn" class="btn btn-primary">画像をダウンロード</a>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
